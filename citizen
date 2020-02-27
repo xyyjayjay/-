@@ -1,0 +1,41 @@
+/*
+ * 定义并实现一个公民类Citizen，
+ * 该类包括的特征信息有：
+ * 身份证号ID、姓名Name、性别Gender、
+ * 年龄Age、籍贯Birthplace、家庭住址Familyaddress属性以
+ * 及构造方法（不含参数）、
+ * 输入公民信息方法Input以及输出公民信息方法Print，
+ * 要求能够对该类对象进行初始化、输入和输出操作。
+ */
+using System;
+ 
+namespace Homework03
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Citizen c1 = new Citizen();
+            c1.Input("610101205012120000", "旺财", "火星", "交大", 2, Gender.female);
+            c1.Print();
+        }
+    }
+    class Citizen
+    {
+    public string ID { get; set; }
+    public string Name { get; set; }
+    public string Gender { get; set; }
+     public int Age
+     { get{retern;}
+       set{age=value>0&&value<130?value:-1} //如果年龄取值大于0小于130，则取value，如果不是，则取-1
+     }
+     public string BirthPlace { get; set; }
+     public string FamilyAddress { get; set; }
+     //构造方法
+     public Citizen
+     {
+     
+     }
+    
+    }
+ }
